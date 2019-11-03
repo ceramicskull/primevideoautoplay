@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "Prime Season Autoplay",
+  "version": "0.1",
+  "content_scripts": [
+  {
+    "matches": [
+      "https://www.primevideo.com/detail/*", "http://www.primevideo.com/detail/*"
+    ],
+    "js": ["jquery-3.4.1.min.js","content.js"]
+  }
+  ],
+  "browser_action": {
+  "default_popup": "popup.html",
+  "default_icon": "icon.png"
+  },
+  "background": {
+  "scripts": ["background.js"]
+  },
+  "permissions": [
+          "storage"
+        ]
+}
